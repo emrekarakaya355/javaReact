@@ -1,1 +1,1 @@
-An Example For SOLID principles
+An Example of SOLID principles
