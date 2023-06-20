@@ -1,9 +1,12 @@
 package com.example.hrms.dataAccess.abstracts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.example.hrms.entities.concretes.JobTitles;
+import com.example.hrms.entities.concretes.JobTitle;
 
-public interface JobTitleDao extends JpaRepository<JobTitles, Integer>{
+@Repository
+public interface JobTitleDao extends JpaRepository<JobTitle, Integer>{
+	boolean existsByPositionNameIs(String positionName);
 
 }

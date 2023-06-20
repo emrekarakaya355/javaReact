@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.hrms.business.abstracts.UserService;
 import com.example.hrms.core.utilities.results.DataResult;
 import com.example.hrms.core.utilities.results.Result;
-import com.example.hrms.entities.concretes.Employee;
+import com.example.hrms.entities.concretes.Employer;
+
 
 @RestController
-@RequestMapping("api/employee")
-public class EmployeeController {
+@RequestMapping("api/employer")
+public class EmployerController {
 	@Autowired
-	private UserService<Employee> employeeServices;
+	private UserService<Employer> employerServices;
 	
 	@GetMapping("/getall")
-	public DataResult<List<Employee>> getAll(){
-		return employeeServices.getAll();
+	public DataResult<List<Employer>> getAll(){
+		return employerServices.getAll();
 	}
 	
 	@PostMapping("/add")
-	public Result add(@RequestBody Employee employee){
-		return this.employeeServices.add(employee);
+	public Result add(@RequestBody Employer employer){
+		return this.employerServices.add(employer);
 		
 		
 	}
-	
 }

@@ -22,6 +22,7 @@ public class Employee extends BaseUser{
 	
 	@Column(name="national_identity")
 	private String nationalIdentity;
+	
 
 	
 }

@@ -26,5 +26,11 @@ public abstract class BaseUser {
 	
 	@Column(name="password")
 	protected String password;
+	
+	public boolean anyNull() {
+		if(email==null) return true;
+		if(password==null) return true;
+		return false;
+	}
 
 }
